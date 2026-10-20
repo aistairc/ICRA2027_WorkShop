@@ -1,0 +1,118 @@
+@media (max-width: 980px) {
+    .card-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.25rem;
+    }
+    .info-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .supporter-track {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .header-inner {
+        align-items: center;
+        justify-content: space-between;
+        gap: .75rem;
+        padding: .75rem 0;
+    }
+    .nav-toggle {
+        display: inline-flex;
+    }
+    .main-nav {
+        display: none;
+        flex-basis: 100%;
+        width: 100%;
+        padding: .5rem;
+        border: 1px solid #e3eaf1;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    }
+    .main-nav.is-open {
+        display: block;
+    }
+    .main-nav ul {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+    }
+    .main-nav a {
+        display: block;
+        padding: .55rem .75rem;
+        border-radius: 4px;
+    }
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+        background: #f2f7fc;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 350px;
+    }
+    .footer-inner {
+        align-items: center;
+        flex-direction: row;
+    }
+    .footer-conference-link {
+        width: min(120px, 35%);
+    }
+    .footer-meta {
+        text-align: right;
+    }
+}
+
+@media (max-width: 560px) {
+    .contact-options {
+        grid-template-columns: 1fr;
+    }
+    .submission-details {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .rewards-list {
+        grid-template-columns: 1fr;
+    }
+    .rewards-list li:nth-child(even) {
+        border-left: 0;
+    }
+    .rewards-list li:nth-child(2) {
+        border-top: 1px solid var(--card-border);
+    }
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    .info-card {
+        min-height: 88px;
+    }
+    .supporter-carousel {
+        grid-template-columns: 36px minmax(0, 1fr) 36px;
+        gap: 0.5rem;
+    }
+    .supporter-track {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.6rem;
+    }
+    .supporter-arrow {
+        width: 36px;
+        height: 36px;
+    }
+    .supporter-logo {
+        min-height: 90px;
+        padding: 0.6rem;
+    }
+    .supporter-logo img {
+        height: 60px;
+    }
+    .person-card {
+        padding: 1rem 0.6rem;
+    }
+    .person-photo {
+        max-width: 120px;
+    }
+}
