@@ -592,39 +592,14 @@ section {
 }
 
 /* SUPPORTERS */
-.supporter-carousel {
-    display: grid;
-    grid-template-columns: 44px minmax(0, 1fr) 44px;
-    align-items: center;
-    gap: 1rem;
-}
-
-.supporter-arrow {
-    width: 44px;
-    height: 44px;
-    border: 1px solid var(--card-border);
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.65);
-    color: var(--card-accent);
-    font-size: 1.5rem;
-    line-height: 1;
-    cursor: pointer;
-}
-
-.supporter-arrow:hover {
-    background: var(--card-accent);
-    color: #fff;
-}
-
-.supporter-arrow:focus-visible,
 .supporter-logo:focus-visible {
     outline: 3px solid var(--card-accent);
     outline-offset: 3px;
 }
 
-.supporter-track {
+.supporter-grid {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
 }
 
