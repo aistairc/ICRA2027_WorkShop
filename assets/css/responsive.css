@@ -28,7 +28,7 @@
     .main-nav.is-open {
         display: block;
     }
-    .main-nav ul {
+    .main-nav > ul {
         align-items: stretch;
         flex-direction: column;
         gap: 0;
@@ -41,6 +41,19 @@
     .main-nav a:hover,
     .main-nav a:focus-visible {
         background: #f2f7fc;
+    }
+    .nav-dropdown-toggle {
+        display: flex;
+        padding: .55rem .75rem;
+    }
+    .nav-dropdown-menu {
+        position: static;
+        min-width: 0;
+        padding: 0 0 0 .75rem;
+        border: 0;
+        border-radius: 0;
+        background: transparent;
+        box-shadow: none;
     }
 }
 
