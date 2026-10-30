@@ -43,7 +43,31 @@ function initializeNavigationMenus() {
     });
 }
 
+function initializeBackToTopButton() {
+    if (document.querySelector(".back-to-top")) {
+        return;
+    }
+
+    const button = document.createElement("button");
+    button.className = "back-to-top";
+    button.type = "button";
+    button.textContent = "Back to top";
+    button.setAttribute("aria-label", "Back to top");
+    button.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    document.body.append(button);
+
+    function updateBackToTopVisibility() {
+        button.classList.toggle("is-visible", window.scrollY > 200);
+    }
+
+    window.addEventListener("scroll", updateBackToTopVisibility, { passive: true });
+    updateBackToTopVisibility();
+}
+
 document.addEventListener("DOMContentLoaded", markActiveNavigationLink);
 document.addEventListener("componentsLoaded", markActiveNavigationLink);
 document.addEventListener("DOMContentLoaded", initializeNavigationMenus);
 document.addEventListener("componentsLoaded", initializeNavigationMenus);
+document.addEventListener("DOMContentLoaded", initializeBackToTopButton);
