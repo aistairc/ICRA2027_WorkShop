@@ -629,6 +629,11 @@ section {
     font-size: 1.05rem;
 }
 
+.person-card h3 a {
+    color: #000;
+    text-decoration: underline;
+}
+
 .person-role {
     margin-bottom: 0.2rem;
     color: var(--card-accent);
@@ -706,20 +711,26 @@ section {
     border-radius: 14px;
     background: var(--card-bg);
     box-shadow: 0 6px 16px var(--card-shadow);
-    transition: transform 0.4s ease, box-shadow 0.2s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .supporter-logo:hover {
-    box-shadow: 0 10px 20px var(--card-shadow);
+    transform: translateY(-3px);
+    border-color: rgba(142, 106, 176, 0.42);
+    box-shadow: 0 12px 24px rgba(117, 87, 151, 0.16);
 }
 
 .supporter-logo img {
     display: block;
     width: 100%;
-    max-width: 120px;
-    height: 80px;
+    max-width: 150px;
+    height: 85px;
     object-fit: contain;
     border-radius: 8px;
+}
+
+.supporter-logo img.supporter-logo-humanoids {
+    max-width: 220px;
 }
 
 /* FOOTER */
