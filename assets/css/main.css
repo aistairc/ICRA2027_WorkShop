@@ -558,13 +558,6 @@ section {
     border-radius: 18px;
     background: var(--card-bg);
     box-shadow: 0 8px 20px var(--card-shadow);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.person-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(142, 106, 176, 0.42);
-    box-shadow: 0 12px 24px rgba(117, 87, 151, 0.16);
 }
 
 .back-to-top {
@@ -711,13 +704,6 @@ section {
     border-radius: 14px;
     background: var(--card-bg);
     box-shadow: 0 6px 16px var(--card-shadow);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-}
-
-.supporter-logo:hover {
-    transform: translateY(-3px);
-    border-color: rgba(142, 106, 176, 0.42);
-    box-shadow: 0 12px 24px rgba(117, 87, 151, 0.16);
 }
 
 .supporter-logo img {
@@ -784,4 +770,69 @@ body.home-page .site-footer {
 .footer-conference-link:focus-visible {
     outline: 3px solid var(--card-accent);
     outline-offset: 4px;
+}
+
+/* CARD HOVER MOTION */
+:is(
+    .announcement-card,
+    .topics-panel,
+    .details-table,
+    .submission-portal,
+    .schedule-table-wrap,
+    .contact-card,
+    .card,
+    .person-card,
+    .info-card,
+    .supporter-logo
+) {
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+:is(
+    .announcement-card,
+    .topics-panel,
+    .details-table,
+    .submission-portal,
+    .schedule-table-wrap,
+    .contact-card,
+    .card,
+    .person-card,
+    .info-card,
+    .supporter-logo
+):hover {
+    transform: translateY(-3px);
+    border-color: rgba(142, 106, 176, 0.42);
+    box-shadow: 0 12px 24px rgba(117, 87, 151, 0.16);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :is(
+        .announcement-card,
+        .topics-panel,
+        .details-table,
+        .submission-portal,
+        .schedule-table-wrap,
+        .contact-card,
+        .card,
+        .person-card,
+        .info-card,
+        .supporter-logo
+    ) {
+        transition: none;
+    }
+
+    :is(
+        .announcement-card,
+        .topics-panel,
+        .details-table,
+        .submission-portal,
+        .schedule-table-wrap,
+        .contact-card,
+        .card,
+        .person-card,
+        .info-card,
+        .supporter-logo
+    ):hover {
+        transform: none;
+    }
 }
